@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, Fragment } from "react";
 
 import AddUser from "./components/Users/AddUser";
 import UsersList from "./components/Users/UsersList";
@@ -13,13 +13,17 @@ function App() {
   };
 
   return (
-    <div className="App">
-      <header className="App-header">
-        <p>Handling Errors with Modals</p>
-        <AddUser onAddUser={addUserHandler} />
-        <UsersList users={usersList} />
-      </header>
-    </div>
+    // <div className="App">
+    //   <header className="App-header">
+    //     <p>Handling Errors with Modals</p>
+    //     <AddUser onAddUser={addUserHandler} />
+    //     <UsersList users={usersList} />
+    //   </header>
+    // </div>
+    <Fragment>
+      <AddUser onAddUser={addUserHandler} />
+      <UsersList users={usersList} />
+    </Fragment>
   );
 }
 
